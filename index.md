@@ -9,11 +9,11 @@ In SQL, User Defined Functions (UDF) enable developers to create functions of th
 ## Scalar, Inline, and Multi-Statement Functions
 There are three different types of User Defined Functions. Each type refers to the data being returned by the function. Scalar functions return a single value. In Line Table functions return a single table variable that was created by a select statement. An example from this assignment shown in figure 1 is an inline table-valued function. The final UDF is a Multi-statement Table Function. This function returns a table variable whose structure was created by hand, similar to a Create Table statement. It is useful when complex data manipulation inside the function is required. There are some limitations for UDF; Inline table function only allows Select statement, certain operations are disallowed in UDF, such as some non-deterministic system functions (like RAND), temporary table and TRY / CATCH block.
 
-CREATE OR ALTER FUNCTION dbo.fProductsByInventory() \
-RETURNS TABLE \
+CREATE OR ALTER FUNCTION dbo.fProductsByInventory() 
+RETURNS TABLE 
 AS \
 RETURN ( \
->  SELECT TOP 10000 ProductName, FORMAT(InventoryDate,'MMMM, yyyy') AS Date, Count \
+  SELECT TOP 10000 ProductName, FORMAT(InventoryDate,'MMMM, yyyy') AS Date, Count \
   FROM vInventories AS i \
     INNER JOIN vProducts AS p \
     ON i.ProductID = p.ProductID \
