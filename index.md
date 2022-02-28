@@ -18,9 +18,9 @@ RETURN ( \
     INNER JOIN vProducts AS p \
     ON i.ProductID = p.ProductID \
   ORDER BY ProductName, InventoryDate \
-); \
+);
 
-SELECT * FROM dbo.fProductsByInventory();
+SELECT * FROM dbo.fProductsByInventory(); \
 Figure 1. Inline table-valued function
 
 ## Summary
