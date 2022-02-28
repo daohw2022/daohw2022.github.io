@@ -15,7 +15,7 @@ AS \
 RETURN ( \
 >  SELECT TOP 10000 ProductName, FORMAT(InventoryDate,'MMMM, yyyy') AS Date, Count \
   FROM vInventories AS i \
->    INNER JOIN vProducts AS p \
+    INNER JOIN vProducts AS p \
     ON i.ProductID = p.ProductID \
   ORDER BY ProductName, InventoryDate \
 );
