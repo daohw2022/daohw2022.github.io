@@ -1,6 +1,6 @@
-Name: Sam Dao
-Date: Feb 27, 2022
-Course: Foundations of databases & SQL programming
+Name: Sam Dao \
+Date: Feb 27, 2022 \
+Course: Foundations of databases & SQL programming \
 https://github.com/daohw2022/DBFoundations-Module07
 
 # Assignment 07 – Functions
